@@ -401,7 +401,7 @@ public class PersistenciaJDBC implements InterfacePersistencia {
             ps.setString(4, V.getPlaca());
         }
         ps.setInt(1 + numAdd, V.getAno());
-        ps.setDate(2 + numAdd, new java.sql.Date(V.getData().getTime());
+        ps.setDate(2 + numAdd, (java.sql.Date)V.getData().getTime());
         ps.setString(3 + numAdd, V.getModelo());
         
         ps.execute();
